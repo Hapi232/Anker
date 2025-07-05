@@ -1,60 +1,59 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Anker Malaysia UX Evaluation</title>
+  <title>Anker UX Evaluation Full</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
-    }
-    section {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 1s ease, transform 1s ease;
-    }
-    section.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .bg-gray { background-color: #e9ecef; }
-    .bg-white { background-color: #ffffff; }
-    h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-    p, li {
-      font-size: 1.2rem;
-    }
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 999;
-    }
-    footer {
-      padding: 1rem;
-      background-color: #dee2e6;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-  </style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  section.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .bg-gray { background-color: #e9ecef; }
+  .bg-white { background-color: #ffffff; }
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  footer {
+    padding: 1rem;
+    background-color: #dee2e6;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .card ul { padding-left: 1.2rem; }
+</style>
 </head>
 <body>
 
@@ -66,73 +65,154 @@
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#ux">User Experience</a></li>
-        <li class="nav-item"><a class="nav-link" href="#layout">Interface Design</a></li>
-        <li class="nav-item"><a class="nav-link" href="#feedback">Feedback</a></li>
-        <li class="nav-item"><a class="nav-link" href="#guidelines">Suggestions</a></li>
-        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="#intro">Introduction</a></li>
+        <li class="nav-item"><a class="nav-link" href="#methodology">Methodology</a></li>
+        <li class="nav-item"><a class="nav-link" href="#evaluation">Evaluation</a></li>
+        <li class="nav-item"><a class="nav-link" href="#guidelines">4.1 Suggestions</a></li>
+        <li class="nav-item"><a class="nav-link" href="#team">4.2 Timeline</a></li>
+        <li class="nav-item"><a class="nav-link" href="#conclusion">Conclusion</a></li>
         <li class="nav-item"><a class="nav-link" href="#references">References</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<section id="home" class="bg-white">
-  <div>
+<section id="intro" class="bg-white">
+  <div class="container">
     <h2>Introduction</h2>
     <p>In today’s era of digital transformation, a well-designed website serves as a crucial key by allowing effective interaction between customer and a brand. In this project, we chose the official website of Anker Innovations, a leading global brand that known for its mobile accessories. Anker specializes in power and charging solutions, connectivity and data transfer, and smart home devices. The website that we evaluate is <a href="https://www.anker.com" target="_blank">https://www.anker.com</a>.</p>
     <p>This evaluation project is to study the effectiveness of website to meets users need in navigating, finding information, and accessing the website features. The goal of this project is to find out the strengths and weaknesses usability and provide guidelines to enhance the overall interface design.</p>
   </div>
 </section>
 
-<section id="ux" class="bg-gray">
-  <div>
-    <h2>User Experience</h2>
-    <p>Tasks included product search, warranty info, and regional settings. Issues were found in menu visibility and CTA clarity.</p>
-  </div>
-</section>
-
-<section id="layout" class="bg-white">
-  <div>
-    <h2>Interface Design</h2>
-    <p>Color scheme is clean, but CTA buttons are not prominent. No onboarding guidance found for first-time users.</p>
-  </div>
-</section>
-
-<section id="feedback" class="bg-gray">
-  <div>
-    <h2>Feedback Mechanism</h2>
-    <p>The contact form lacks dropdowns and confirmation messages, which may confuse users after submission.</p>
-  </div>
-</section>
-
-<section id="guidelines" class="bg-white">
-  <div>
-    <h2>Suggestions</h2>
-    <ul class="list-unstyled">
-      <li>Add search suggestions</li>
-      <li>Highlight CTAs with better color</li>
-      <li>Provide onboarding tooltips</li>
-      <li>Improve mobile navigation</li>
+<section id="methodology" class="bg-gray">
+  <div class="container">
+    <h2>Methodology</h2>
+    <p>We conducted a structured user observation study with 3 participants. They are familiar with online shopping but not Anker’s site. Each participant performed 5 tasks before answering the evaluation form:</p>
+    <ul>
+      <li>Find and view details of a power bank</li>
+      <li>Search for USB-C cable</li>
+      <li>Locate contact or feedback</li>
+      <li>Locate warranty or support</li>
+      <li>Switch language or region</li>
     </ul>
+    <h5>Participants Profile</h5>
+    <table class="table table-bordered bg-white">
+      <thead><tr><th>Participant</th><th>Age</th><th>Experience</th><th>Online Shopping</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td>28</td><td>Intermediate</td><td>Occasionally</td></tr>
+        <tr><td>B</td><td>23</td><td>Intermediate</td><td>Monthly</td></tr>
+        <tr><td>C</td><td>36</td><td>Basic</td><td>Seldom</td></tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
-<section id="team" class="bg-gray">
-  <div>
-    <h2>Team</h2>
-    <p>Chin Yi Hong I24027964 (UX Testing)<br>Ellie Chuo Ker Yng I24028163 (Writing & Analysis)</p>
+<section id="evaluation" class="bg-white">
+  <div class="container">
+    <h2>Evaluation Results and Design Challenges</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">(a) Website Usage</h5>
+            <p class="card-text">
+              Users rated the site 4/5 overall. Some users found the homepage messaging unclear and suggested better content labeling and layout consistency.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">(b) Interface Design</h5>
+            <p class="card-text">
+              The site looks visually appealing. However, one user couldn’t locate the search bar easily. Guidance could be helpful for new users.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">(c) Feedback Mechanism</h5>
+            <p class="card-text">
+              One user struggled to find the contact form. Most preferred a floating button and clearer confirmation after submitting feedback.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="guidelines" class="bg-gray">
+  <div class="container">
+    <h2>4.1 Suggested Guidelines</h2>
+    <div class="row g-4">
+      <div class="col-md-6"><div class="card"><div class="card-body">
+        <h5>Homepage Messaging</h5><ul><li>Add tagline</li><li>Use bold headings</li></ul>
+      </div></div></div>
+      <div class="col-md-6"><div class="card"><div class="card-body">
+        <h5>Navigation Bar</h5><ul><li>Improve search visibility</li><li>Group categories</li></ul>
+      </div></div></div>
+      <div class="col-md-6"><div class="card"><div class="card-body">
+        <h5>Floating Feedback</h5><ul><li>Persistent button</li><li>Expandable form</li></ul>
+      </div></div></div>
+      <div class="col-md-6"><div class="card"><div class="card-body">
+        <h5>On-Screen Guidance</h5><ul><li>Tooltips</li><li>Quick tour option</li></ul>
+      </div></div></div>
+      <div class="col-md-12"><div class="card"><div class="card-body">
+        <h5>Confirmation</h5><ul><li>Popup messages ≥ 3s</li><li>Track request link</li></ul>
+      </div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="bg-white">
+  <div class="container">
+    <h2>4.2 Contribution & Timeline</h2>
+    <div class="card"><div class="card-body">
+      <table class="table table-bordered mb-0">
+        <thead><tr><th>Responsibility</th><th>Contributor</th><th>Timeline</th></tr></thead>
+        <tbody>
+          <tr><td>Discussion</td><td>Chin Yi Hong, Ellie Chuo Ker Yng</td><td>Week 1</td></tr>
+          <tr><td>UX Testing</td><td>Chin Yi Hong, Ellie Chuo Ker Yng</td><td>Week 2</td></tr>
+          <tr><td>Report (Intro, Methodology,Evaluation Results and Design Challenges)</td><td>Ellie Chuo Ker Yng</td><td>Week 3</td></tr>
+          <tr><td>Report (Blog & Conclusion)</td><td>Chin Yi Hong</td><td>Week 4</td></tr>
+          <tr><td>Build Web Blog (GitHub)</td><td>Chin Yi Hong</td><td>Week 5</td></tr>
+          <tr><td>Presentation</td><td>Chin Yi Hong, Ellie Chuo Ker Yng</td><td>Week 6</td></tr>
+        </tbody>
+      </table>
+    </div></div>
+  </div>
+</section>
+
+<section class="bg-white">
+  <div class="container text-center">
+    <h2 class="mb-4">Team Contribution Circle Chart</h2>
+    <div style="max-width: 400px; margin: auto;">
+      <canvas id="circleChart"></canvas>
+    </div>
+  </div>
+</section>
+
+<section id="conclusion" class="bg-gray">
+  <div class="container">
+    <h2>Conclusion</h2>
+    <p>Anker’s website is visually strong and generally easy to use. However, users found the homepage message unclear and had issues locating key features. Suggestions include better labels, improved navigation and onboarding support.</p>
+    <p>Applying these changes would enhance usability and boost user satisfaction, helping them achieve goals confidently.</p>
   </div>
 </section>
 
 <section id="references" class="bg-white">
-  <div>
+  <div class="container">
     <h2>References</h2>
-    <ul class="list-unstyled">
-      <li>Anker Malaysia: <a href="https://www.anker.com/my" target="_blank">anker.com/my</a></li>
-      <li>All screenshots taken by team</li>
-      <li>Turnitin Report: < 25%</li>
+    <ul>
+      <li><a href="https://www.anker.com/my" target="_blank">Anker Malaysia Website</a></li>
+      <li>All data/screenshots collected by team</li>
+      <li>Turnitin Similarity: &lt; 25%</li>
     </ul>
   </div>
 </section>
@@ -142,7 +222,6 @@
 </footer>
 
 <script>
-  // Intersection Observer for fade-in
   const sections = document.querySelectorAll("section");
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -151,8 +230,40 @@
       }
     });
   }, { threshold: 0.1 });
-
   sections.forEach(section => observer.observe(section));
+
+  const ctx = document.getElementById('circleChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Chin Yi Hong', 'Ellie Chuo Ker Yng'],
+      datasets: [{
+        label: 'Task Distribution',
+        data: [5, 5],
+        backgroundColor: [
+          'rgba(54, 162, 235, 0.7)',
+          'rgba(255, 99, 132, 0.7)'
+        ],
+        borderColor: [
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 99, 132, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        title: {
+          display: true,
+          text: 'Task Contribution Overview'
+        },
+        legend: {
+          position: 'bottom'
+        }
+      }
+    }
+  });
 </script>
 
 </body>
