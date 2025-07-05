@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anker Malaysia UX Evaluation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .bg-gray { background-color: #e9ecef; }
+    .bg-white { background-color: #ffffff; }
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    p, li {
+      font-size: 1.2rem;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+    }
+    footer {
+      padding: 1rem;
+      background-color: #dee2e6;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Anker UX Blog</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ux">User Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#layout">Interface Design</a></li>
+        <li class="nav-item"><a class="nav-link" href="#feedback">Feedback</a></li>
+        <li class="nav-item"><a class="nav-link" href="#guidelines">Suggestions</a></li>
+        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="#references">References</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="home" class="bg-white">
+  <div>
+    <h2>Introduction</h2>
+    <p>In today’s era of digital transformation, a well-designed website serves as a crucial key by allowing effective interaction between customer and a brand. In this project, we chose the official website of Anker Innovations, a leading global brand that known for its mobile accessories. Anker specializes in power and charging solutions, connectivity and data transfer, and smart home devices. The website that we evaluate is <a href="https://www.anker.com" target="_blank">https://www.anker.com</a>.</p>
+    <p>This evaluation project is to study the effectiveness of website to meets users need in navigating, finding information, and accessing the website features. The goal of this project is to find out the strengths and weaknesses usability and provide guidelines to enhance the overall interface design.</p>
+  </div>
+</section>
+
+<section id="ux" class="bg-gray">
+  <div>
+    <h2>User Experience</h2>
+    <p>Tasks included product search, warranty info, and regional settings. Issues were found in menu visibility and CTA clarity.</p>
+  </div>
+</section>
+
+<section id="layout" class="bg-white">
+  <div>
+    <h2>Interface Design</h2>
+    <p>Color scheme is clean, but CTA buttons are not prominent. No onboarding guidance found for first-time users.</p>
+  </div>
+</section>
+
+<section id="feedback" class="bg-gray">
+  <div>
+    <h2>Feedback Mechanism</h2>
+    <p>The contact form lacks dropdowns and confirmation messages, which may confuse users after submission.</p>
+  </div>
+</section>
+
+<section id="guidelines" class="bg-white">
+  <div>
+    <h2>Suggestions</h2>
+    <ul class="list-unstyled">
+      <li>Add search suggestions</li>
+      <li>Highlight CTAs with better color</li>
+      <li>Provide onboarding tooltips</li>
+      <li>Improve mobile navigation</li>
+    </ul>
+  </div>
+</section>
+
+<section id="team" class="bg-gray">
+  <div>
+    <h2>Team</h2>
+    <p>Chin Yi Hong I24027964 (UX Testing)<br>Ellie Chuo Ker Yng I24028163 (Writing & Analysis)</p>
+  </div>
+</section>
+
+<section id="references" class="bg-white">
+  <div>
+    <h2>References</h2>
+    <ul class="list-unstyled">
+      <li>Anker Malaysia: <a href="https://www.anker.com/my" target="_blank">anker.com/my</a></li>
+      <li>All screenshots taken by team</li>
+      <li>Turnitin Report: < 25%</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 UX Blog – Anker Evaluation
+</footer>
+
+<script>
+  // Intersection Observer for fade-in
+  const sections = document.querySelectorAll("section");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
